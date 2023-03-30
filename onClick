@@ -1,0 +1,10 @@
+EditText birthDateEditText = findViewById(R.id.birth_date_edit_text);
+TextView ageTextView = findViewById(R.id.age_text_view);
+
+String birthDateString = birthDateEditText.getText().toString();
+LocalDate birthDate = LocalDate.parse(birthDateString);
+
+LocalDate currentDate = LocalDate.now();
+
+String ageString = calculateAge(birthDate, currentDate);
+ageTextView.setText(ageString);
